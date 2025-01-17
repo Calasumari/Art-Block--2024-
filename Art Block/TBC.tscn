@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4h83ffjcdjvp"]
+
+[ext_resource type="Script" path="res://TBC.gd" id="1_8pneu"]
+[ext_resource type="Texture2D" uid="uid://bp1uvrlca2igf" path="res://Assets for Art Block/Level Assets/TBC.png" id="1_bgw8g"]
+
+[node name="TBC" type="Node2D"]
+script = ExtResource("1_8pneu")
+
+[node name="Tbc" type="Sprite2D" parent="."]
+position = Vector2(-22, 30)
+scale = Vector2(0.342, 0.342)
+texture = ExtResource("1_bgw8g")
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 827.0
+offset_top = 620.0
+offset_right = 1254.0
+offset_bottom = 1029.0
+text = "Press Enter to restart or Esc to exit
+"
+tab_size = 9

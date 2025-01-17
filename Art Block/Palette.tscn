@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsp18i0sxfgbv"]
+
+[ext_resource type="Texture2D" uid="uid://dfriqc2qaulvr" path="res://Assets for Art Block/Level Assets/Asssets2/Palette.png" id="1_i6h3b"]
+[ext_resource type="Texture2D" uid="uid://dmao74yr10vyl" path="res://Assets for Art Block/Level Assets/Asssets2/Pink1.png" id="2_8rfsh"]
+[ext_resource type="Texture2D" uid="uid://h501cu5h1rgg" path="res://Assets for Art Block/Level Assets/Asssets2/Yellow2.png" id="3_xismn"]
+[ext_resource type="Texture2D" uid="uid://cfuk2sjti01ug" path="res://Assets for Art Block/Level Assets/Asssets2/Blue3.png" id="4_utgf6"]
+[ext_resource type="Texture2D" uid="uid://b065pr1ysjd2q" path="res://Assets for Art Block/Level Assets/Asssets2/ColourInstructions.png" id="5_vvmeh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Palette" type="Sprite2D" parent="."]
+position = Vector2(1383, -32)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("1_i6h3b")
+centered = false
+
+[node name="Pink1" type="Sprite2D" parent="."]
+position = Vector2(1383, -32)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("2_8rfsh")
+centered = false
+
+[node name="Yellow2" type="Sprite2D" parent="."]
+position = Vector2(1383, -32)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("3_xismn")
+centered = false
+
+[node name="Blue3" type="Sprite2D" parent="."]
+position = Vector2(1383, -32)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("4_utgf6")
+centered = false
+
+[node name="ColourInstructions" type="Sprite2D" parent="."]
+position = Vector2(1383, -32)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("5_vvmeh")
+centered = false

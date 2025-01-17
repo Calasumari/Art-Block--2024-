@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5pqyin1gpijx"]
+
+[ext_resource type="Texture2D" uid="uid://bkvxwomy6sdvt" path="res://Assets for Art Block/Other/Assets/Illustration66 (4).png" id="1_kh8ee"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="1_vyfkr"]
+[ext_resource type="Texture2D" uid="uid://wctes6riqlou" path="res://Assets for Art Block/Other/Assets/Illustration66 (9).png" id="2_44wyr"]
+[ext_resource type="Script" path="res://AnimatedSprite2D.gd" id="3_po5to"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mjpcc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kh8ee")
+}],
+"loop": true,
+"name": &"Purple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_44wyr")
+}],
+"loop": true,
+"name": &"Red",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mjpcc")
+animation = &"Purple"
+script = ExtResource("3_po5to")
+
+[node name="Player" type="Sprite2D" parent="AnimatedSprite2D"]
+script = ExtResource("1_vyfkr")

@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://ruf6a5yhl554"]
+
+[ext_resource type="Texture2D" uid="uid://c2ub6hjt131lp" path="res://Assets for Art Block/Level Assets/Frame.png" id="1_78d70"]
+[ext_resource type="Script" path="res://Level6.gd" id="1_n1orx"]
+[ext_resource type="PackedScene" uid="uid://dm6q5g6yfi7ga" path="res://MC(InLevel).tscn" id="2_6ru7o"]
+[ext_resource type="Texture2D" uid="uid://b5ecjqe5v7163" path="res://Assets for Art Block/Level Assets/L6Frame.png" id="2_evlir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jo78"]
+size = Vector2(6041, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yb30j"]
+size = Vector2(94, 2952)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcqu5"]
+size = Vector2(312, 1971.75)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_n1orx")
+_target_level = "res://Level7.tscn"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Frame" type="Sprite2D" parent="StaticBody2D"]
+visible = false
+texture = ExtResource("1_78d70")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2782.5, 96)
+shape = SubResource("RectangleShape2D_2jo78")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2867, 2901)
+shape = SubResource("RectangleShape2D_2jo78")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(37, 1466)
+shape = SubResource("RectangleShape2D_yb30j")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(5724, 1659)
+shape = SubResource("RectangleShape2D_yb30j")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="L6Frame" type="Sprite2D" parent="StaticBody2D2"]
+texture = ExtResource("2_evlir")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(1120, 207, 1119, 207, 1119, 2793, 5760, 2793, 5760, 3000, 0, 3000, 0, 0, 1120, 0)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(5760, 1079, 2091, 1079, 2091, 204, 2090, 204, 2090, 201, 2091, 201, 2091, 0, 5760, 0)
+
+[node name="MC" parent="." instance=ExtResource("2_6ru7o")]
+position = Vector2(1169, -577)
+
+[node name="Camera2D" type="Camera2D" parent="MC"]
+position = Vector2(450, 764)
+limit_left = 0
+limit_top = 0
+limit_right = 5760
+limit_bottom = 3000
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="LevelEND" type="StaticBody2D" parent="."]
+
+[node name="LevelEND" type="CollisionShape2D" parent="LevelEND" groups=["LevelEnd"]]
+position = Vector2(5748, 1939)
+shape = SubResource("RectangleShape2D_fcqu5")
+debug_color = Color(0.270588, 0.631373, 0, 0.419608)

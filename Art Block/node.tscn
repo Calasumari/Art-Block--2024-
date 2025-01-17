@@ -1,0 +1,213 @@
+[gd_scene load_steps=29 format=3 uid="uid://dtai6actib5xu"]
+
+[ext_resource type="Script" path="res://node.gd" id="1_4d312"]
+[ext_resource type="Texture2D" uid="uid://tr7d71widp6q" path="res://Assets for Art Block/Other/bg_blurred.png" id="1_gbyej"]
+[ext_resource type="Texture2D" uid="uid://6kayk7f87ixg" path="res://Assets for Art Block/Other/Assets/Illustration66 (3).png" id="2_rs04n"]
+[ext_resource type="Texture2D" uid="uid://bse0kxmaifsiv" path="res://Assets for Art Block/Props/Tree_1.png" id="3_fykks"]
+[ext_resource type="Texture2D" uid="uid://co2vs5gh33j60" path="res://Assets for Art Block/Props/Tree_2.png" id="4_x3e1t"]
+[ext_resource type="Texture2D" uid="uid://2etvdiknh03e" path="res://Assets for Art Block/Props/Tree_4.png" id="5_1ttmo"]
+[ext_resource type="Texture2D" uid="uid://bv6qduox1rimu" path="res://Assets for Art Block/Other/castle.png" id="6_4622i"]
+[ext_resource type="Texture2D" uid="uid://dhq32jyc7s7fh" path="res://Assets for Art Block/Props/Tree_5.png" id="6_gjtpq"]
+[ext_resource type="Texture2D" uid="uid://qb0pj5w7fooy" path="res://Assets for Art Block/09.05/Bushes.png" id="8_50jbu"]
+[ext_resource type="Texture2D" uid="uid://c2ijx7unxsn6l" path="res://Assets for Art Block/Props/Tree_3.png" id="8_dqcbw"]
+[ext_resource type="Texture2D" uid="uid://ifw4yjf1dfkq" path="res://Assets for Art Block/09.05/20240509_194142.png" id="10_0d2iv"]
+[ext_resource type="PackedScene" uid="uid://dv1kl7rd8ltrf" path="res://mc.tscn" id="10_6jrtn"]
+[ext_resource type="Texture2D" uid="uid://dwsbh4j24qa8h" path="res://Assets for Art Block/Level Assets/Asssets2/MoveInstructions.png" id="10_mncnn"]
+[ext_resource type="Texture2D" uid="uid://cteam7d02usn6" path="res://Assets for Art Block/09.05/20240509_194128.png" id="11_ouvlc"]
+[ext_resource type="Texture2D" uid="uid://blvwi008wrl1s" path="res://Assets for Art Block/09.05/20240509_194207.png" id="12_0whhl"]
+[ext_resource type="Texture2D" uid="uid://bhq14pljl7s50" path="res://Assets for Art Block/09.05/20240509_194557.png" id="13_no0yf"]
+[ext_resource type="Texture2D" uid="uid://y02bmose0bw5" path="res://Assets for Art Block/09.05/Grass_flowers.png" id="14_7k0u2"]
+[ext_resource type="Texture2D" uid="uid://cc3so4cdy5rgi" path="res://Assets for Art Block/09.05/20240509_194455.png" id="15_fc8ly"]
+[ext_resource type="Texture2D" uid="uid://bd8gb222pic3r" path="res://Assets for Art Block/09.05/20240509_194445.png" id="17_n3ij6"]
+[ext_resource type="Texture2D" uid="uid://bt2814skfex2l" path="res://Assets for Art Block/09.05/20240509_194425.png" id="18_k4nib"]
+[ext_resource type="Texture2D" uid="uid://ds3fhixyp7yw0" path="res://Assets for Art Block/09.05/20240509_194323.png" id="19_0cdi4"]
+[ext_resource type="Texture2D" uid="uid://n0cb3eod5q6u" path="res://Assets for Art Block/09.05/20240509_194307.png" id="20_53h57"]
+[ext_resource type="Texture2D" uid="uid://crp17uxi76h4j" path="res://Assets for Art Block/09.05/20240509_194157.png" id="21_i7y0d"]
+[ext_resource type="Texture2D" uid="uid://056b1jebxaki" path="res://Assets for Art Block/09.05/20240509_194614.png" id="22_gsbp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8f1x"]
+size = Vector2(10738.4, 1087.23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hj2eq"]
+size = Vector2(113, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgrx"]
+size = Vector2(532, 1588.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_srkxr"]
+size = Vector2(4351, 294)
+
+[node name="Opening World" type="Node2D"]
+script = ExtResource("1_4d312")
+_target_level = "res://Level1.tscn"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1455, 590)
+scale = Vector2(0.777662, 0.777662)
+texture = ExtResource("1_gbyej")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxBackground/ParallaxLayer2"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2/StaticBody2D"]
+position = Vector2(1443, 518)
+scale = Vector2(0.495048, 0.492571)
+texture = ExtResource("2_rs04n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/ParallaxLayer2/StaticBody2D"]
+position = Vector2(2415, 1267)
+scale = Vector2(0.495048, 0.492571)
+shape = SubResource("RectangleShape2D_o8f1x")
+
+[node name="Tree1" type="Sprite2D" parent="."]
+position = Vector2(208, 302)
+scale = Vector2(0.655273, 0.672852)
+texture = ExtResource("3_fykks")
+
+[node name="Tree2" type="Sprite2D" parent="."]
+position = Vector2(359, 404)
+scale = Vector2(0.455078, 0.525391)
+texture = ExtResource("4_x3e1t")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2506, 55.5008)
+scale = Vector2(1.20215, 1.20215)
+texture = ExtResource("5_1ttmo")
+
+[node name="Tree4" type="Sprite2D" parent="."]
+position = Vector2(1705, 120.501)
+texture = ExtResource("5_1ttmo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Castle" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2102, 297.501)
+scale = Vector2(0.34016, 0.34016)
+texture = ExtResource("6_4622i")
+
+[node name="Bushes" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1584, 584)
+scale = Vector2(0.613793, 0.613793)
+texture = ExtResource("8_50jbu")
+
+[node name="Tree5" type="Sprite2D" parent="."]
+position = Vector2(1670, 182.501)
+texture = ExtResource("6_gjtpq")
+
+[node name="20240509194143" type="Sprite2D" parent="."]
+position = Vector2(2385, 653)
+texture = ExtResource("10_0d2iv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2438, 433.501)
+scale = Vector2(0.577148, 0.577148)
+texture = ExtResource("3_fykks")
+
+[node name="LevelEND" type="StaticBody2D" parent="."]
+position = Vector2(1400, -1968)
+
+[node name="LevelEND" type="CollisionShape2D" parent="LevelEND" groups=["LevelEnd"]]
+position = Vector2(697.5, 2565)
+shape = SubResource("RectangleShape2D_hj2eq")
+debug_color = Color(0.270588, 0.631373, 0, 0.419608)
+
+[node name="20240509194128" type="Sprite2D" parent="."]
+position = Vector2(284, 606)
+texture = ExtResource("11_ouvlc")
+
+[node name="20240509194207" type="Sprite2D" parent="."]
+position = Vector2(678, 550)
+texture = ExtResource("12_0whhl")
+
+[node name="20240509194557" type="Sprite2D" parent="."]
+position = Vector2(2771, 709)
+texture = ExtResource("13_no0yf")
+
+[node name="GrassFlowers" type="Sprite2D" parent="."]
+position = Vector2(685, 598)
+scale = Vector2(0.70442, 0.70442)
+texture = ExtResource("14_7k0u2")
+
+[node name="20240509194455" type="Sprite2D" parent="."]
+position = Vector2(1666, 639)
+texture = ExtResource("15_fc8ly")
+
+[node name="MC" parent="." instance=ExtResource("10_6jrtn")]
+position = Vector2(228, 646)
+
+[node name="Camera2D" type="Camera2D" parent="MC"]
+position = Vector2(68, 165)
+scale = Vector2(1.00576, 1)
+offset = Vector2(300, 0)
+limit_left = 0
+limit_top = -74
+limit_right = 2600
+limit_bottom = 1506
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="Tree3" type="Sprite2D" parent="."]
+position = Vector2(1104, 557)
+scale = Vector2(0.833984, 0.833984)
+texture = ExtResource("8_dqcbw")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-197, 480)
+shape = SubResource("RectangleShape2D_7jgrx")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(2967, 270.751)
+shape = SubResource("RectangleShape2D_7jgrx")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+position = Vector2(1678, -395)
+shape = SubResource("RectangleShape2D_srkxr")
+
+[node name="MoveInstructions" type="Sprite2D" parent="."]
+position = Vector2(1827, 371)
+scale = Vector2(0.547215, 0.547215)
+texture = ExtResource("10_mncnn")
+
+[node name="20240509194142" type="Sprite2D" parent="."]
+position = Vector2(1018, 936)
+texture = ExtResource("10_0d2iv")
+
+[node name="20240509194445" type="Sprite2D" parent="."]
+position = Vector2(206, 880)
+texture = ExtResource("17_n3ij6")
+
+[node name="20240509194425" type="Sprite2D" parent="."]
+position = Vector2(438, 911)
+texture = ExtResource("18_k4nib")
+
+[node name="20240509194323" type="Sprite2D" parent="."]
+position = Vector2(346, 895)
+texture = ExtResource("19_0cdi4")
+
+[node name="20240509194307" type="Sprite2D" parent="."]
+position = Vector2(88, 893)
+texture = ExtResource("20_53h57")
+
+[node name="20240509194157" type="Sprite2D" parent="."]
+position = Vector2(2618, 635)
+texture = ExtResource("21_i7y0d")
+
+[node name="Bushes" type="Sprite2D" parent="."]
+position = Vector2(2569, 923)
+texture = ExtResource("8_50jbu")
+
+[node name="20240509194614" type="Sprite2D" parent="."]
+position = Vector2(1209, 937)
+texture = ExtResource("22_gsbp3")

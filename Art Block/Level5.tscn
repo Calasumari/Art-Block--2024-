@@ -1,0 +1,137 @@
+[gd_scene load_steps=18 format=3 uid="uid://rot1s2au4130"]
+
+[ext_resource type="Texture2D" uid="uid://w8okg7g1wygk" path="res://Assets for Art Block/Level Assets/L5Frame.png" id="1_glowu"]
+[ext_resource type="Script" path="res://Level5.gd" id="1_nux45"]
+[ext_resource type="PackedScene" uid="uid://7ekyat622k5j" path="res://ColourMechanic.tscn" id="1_rj4pc"]
+[ext_resource type="Script" path="res://L4b.gd" id="2_0723r"]
+[ext_resource type="PackedScene" uid="uid://dm6q5g6yfi7ga" path="res://MC(InLevel).tscn" id="2_q4tgr"]
+[ext_resource type="Texture2D" uid="uid://dqy76oxo7nav3" path="res://Assets for Art Block/Level Assets/L5B.png" id="2_yptkf"]
+[ext_resource type="Texture2D" uid="uid://dc8cmh0csc4ww" path="res://Assets for Art Block/Level Assets/L5P.png" id="3_nrjuq"]
+[ext_resource type="Script" path="res://L4p.gd" id="4_3vmhc"]
+[ext_resource type="Texture2D" uid="uid://cnjc11ynpvx54" path="res://Assets for Art Block/Level Assets/L5Y.png" id="4_u0h7k"]
+[ext_resource type="Texture2D" uid="uid://dxu8h80y5ye1f" path="res://Assets for Art Block/Level Assets/L5Bookcase.png" id="5_5220x"]
+[ext_resource type="Script" path="res://SignalBox.gd" id="5_ldgcg"]
+[ext_resource type="Script" path="res://L4y.gd" id="6_csrb4"]
+[ext_resource type="Texture2D" uid="uid://dkydevoqeramp" path="res://Assets for Art Block/Level Assets/L5Floor.png" id="7_vqv2m"]
+[ext_resource type="Texture2D" uid="uid://6ky7ef3lwg77" path="res://Assets for Art Block/Level Assets/L5Tunnel.png" id="8_fabyw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jo78"]
+size = Vector2(6041, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yb30j"]
+size = Vector2(94, 2952)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i27wx"]
+size = Vector2(2146, 238.875)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_nux45")
+_target_level = "res://Level6.tscn"
+
+[node name="Node2D" parent="." instance=ExtResource("1_rj4pc")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="L5Frame" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_glowu")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2782.5, 96)
+shape = SubResource("RectangleShape2D_2jo78")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2867, 2901)
+shape = SubResource("RectangleShape2D_2jo78")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(37, 1466)
+shape = SubResource("RectangleShape2D_yb30j")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(5724, 1659)
+shape = SubResource("RectangleShape2D_yb30j")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+script = ExtResource("2_0723r")
+
+[node name="L5b" type="Sprite2D" parent="StaticBody2D2"]
+texture = ExtResource("2_yptkf")
+centered = false
+
+[node name="b1" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(2388, 1607, 2389, 1637, 2388, 1637, 2388, 1644, 951, 1644, 951, 1599, 2388, 1599)
+one_way_collision = true
+
+[node name="b2" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(2215, 1992, 1106.5, 1992, 1105, 1994.3, 1105, 3000, 1029, 3000, 1029, 1921, 2215, 1921)
+
+[node name="SignalBox" type="Node2D" parent="StaticBody2D2"]
+script = ExtResource("5_ldgcg")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+script = ExtResource("4_3vmhc")
+
+[node name="L5p" type="Sprite2D" parent="StaticBody2D4"]
+texture = ExtResource("3_nrjuq")
+centered = false
+
+[node name="p1" type="CollisionPolygon2D" parent="StaticBody2D4"]
+polygon = PackedVector2Array(2367, 723, 2368, 753, 2367, 753, 2367, 760, 930, 760, 930, 715, 2367, 715)
+one_way_collision = true
+
+[node name="SignalBox" type="Node2D" parent="StaticBody2D4"]
+script = ExtResource("5_ldgcg")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+script = ExtResource("6_csrb4")
+
+[node name="L5y" type="Sprite2D" parent="StaticBody2D5"]
+texture = ExtResource("4_u0h7k")
+centered = false
+
+[node name="y1" type="CollisionPolygon2D" parent="StaticBody2D5"]
+polygon = PackedVector2Array(2378, 1158, 2379, 1188, 2378, 1188, 2378, 1195, 941, 1195, 941, 1150, 2378, 1150)
+one_way_collision = true
+
+[node name="SignalBox" type="Node2D" parent="StaticBody2D5"]
+script = ExtResource("5_ldgcg")
+
+[node name="L5Bookcase" type="Sprite2D" parent="."]
+texture = ExtResource("5_5220x")
+centered = false
+
+[node name="MC" parent="." instance=ExtResource("2_q4tgr")]
+position = Vector2(-77, 848)
+
+[node name="Camera2D" type="Camera2D" parent="MC"]
+position = Vector2(450, 764)
+limit_left = 0
+limit_top = 0
+limit_right = 5760
+limit_bottom = 3000
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="L5Floor" type="Sprite2D" parent="."]
+texture = ExtResource("7_vqv2m")
+centered = false
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="L5Tunnel" type="Sprite2D" parent="StaticBody2D3"]
+texture = ExtResource("8_fabyw")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+polygon = PackedVector2Array(1119, 3000, 0, 3000, 0, 1921, 1119, 1921)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D3"]
+polygon = PackedVector2Array(5760, 3000, 2091, 3000, 2091, 1921, 5760, 1921)
+
+[node name="LevelEND" type="StaticBody2D" parent="."]
+
+[node name="LevelEND" type="CollisionShape2D" parent="LevelEND" groups=["LevelEnd"]]
+position = Vector2(1768, 2812)
+shape = SubResource("RectangleShape2D_i27wx")
+debug_color = Color(0.270588, 0.631373, 0, 0.419608)

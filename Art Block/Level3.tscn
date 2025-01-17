@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://boqk577r142ps"]
+
+[ext_resource type="Texture2D" uid="uid://c2ub6hjt131lp" path="res://Assets for Art Block/Level Assets/Frame.png" id="1_21udy"]
+[ext_resource type="Script" path="res://Level3.gd" id="1_tn2x3"]
+[ext_resource type="PackedScene" uid="uid://7ekyat622k5j" path="res://ColourMechanic.tscn" id="2_2ht0m"]
+[ext_resource type="PackedScene" uid="uid://dm6q5g6yfi7ga" path="res://MC(InLevel).tscn" id="2_7snvs"]
+[ext_resource type="Texture2D" uid="uid://bsvppdbx0mbcn" path="res://Assets for Art Block/Level Assets/L3.png" id="3_nk14t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jo78"]
+size = Vector2(6041, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yb30j"]
+size = Vector2(94, 2952)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okibt"]
+size = Vector2(312, 1201.75)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tn2x3")
+_target_level = "res://Level4.tscn"
+
+[node name="Node2D" parent="." instance=ExtResource("2_2ht0m")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Frame" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_21udy")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2782.5, 96)
+shape = SubResource("RectangleShape2D_2jo78")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2867, 2901)
+shape = SubResource("RectangleShape2D_2jo78")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(37, 1466)
+shape = SubResource("RectangleShape2D_yb30j")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" groups=["LevelEnd"]]
+position = Vector2(5724, 1659)
+shape = SubResource("RectangleShape2D_yb30j")
+
+[node name="L3" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("3_nk14t")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(1479, 2653, 1820, 2652, 1819, 2458, 2181, 2458, 2180, 2287, 2626, 2287, 2624, 2104, 3132, 2103, 3131, 1936, 3681, 1937, 3682, 1813, 4107, 1812, 4107, 1651, 4642, 1652, 4642, 1474, 5050, 1473, 5048, 1289, 5680, 1290, 5762, 1290, 5760, 3000, 1488, 2999, 1481, 2794)
+
+[node name="LevelEND" type="StaticBody2D" parent="."]
+position = Vector2(-9, 8)
+
+[node name="LevelEND" type="CollisionShape2D" parent="LevelEND" groups=["LevelEnd"]]
+position = Vector2(5754, 693.875)
+shape = SubResource("RectangleShape2D_okibt")
+debug_color = Color(0.270588, 0.631373, 0, 0.419608)
+
+[node name="MC" parent="." instance=ExtResource("2_7snvs")]
+position = Vector2(377, 207)
+
+[node name="Camera2D" type="Camera2D" parent="MC"]
+position = Vector2(450, 764)
+limit_left = 0
+limit_top = 0
+limit_right = 5760
+limit_bottom = 3000
+limit_smoothed = true
+position_smoothing_enabled = true

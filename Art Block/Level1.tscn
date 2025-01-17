@@ -1,0 +1,119 @@
+[gd_scene load_steps=14 format=3 uid="uid://bmdd6wpulm76p"]
+
+[ext_resource type="Texture2D" uid="uid://c2ub6hjt131lp" path="res://Assets for Art Block/Level Assets/Frame.png" id="1_8wv68"]
+[ext_resource type="PackedScene" uid="uid://7ekyat622k5j" path="res://ColourMechanic.tscn" id="1_l63f6"]
+[ext_resource type="Script" path="res://Level1.gd" id="1_tyhew"]
+[ext_resource type="Texture2D" uid="uid://ngfh80yokmpt" path="res://Assets for Art Block/Level Assets/L1Bars.png" id="3_uvvl6"]
+[ext_resource type="Texture2D" uid="uid://curpl0v76ox77" path="res://Assets for Art Block/Level Assets/L1Enter.png" id="4_030co"]
+[ext_resource type="Texture2D" uid="uid://b8tvxt4not5ot" path="res://Assets for Art Block/Level Assets/L1Decs.png" id="4_bkfc4"]
+[ext_resource type="Texture2D" uid="uid://dllxc4pfbagsj" path="res://Assets for Art Block/Level Assets/L1StairsF.png" id="4_v7p62"]
+[ext_resource type="PackedScene" uid="uid://dm6q5g6yfi7ga" path="res://MC(InLevel).tscn" id="6_kqc7r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jo78"]
+size = Vector2(6041, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yb30j"]
+size = Vector2(94, 2952)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ylyd"]
+size = Vector2(4406.5, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxjjr"]
+size = Vector2(515.5, 225.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdaor"]
+size = Vector2(312, 587)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tyhew")
+_target_level = "res://Level2.tscn"
+
+[node name="Node2D" parent="." instance=ExtResource("1_l63f6")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Frame" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_8wv68")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2782.5, 96)
+shape = SubResource("RectangleShape2D_2jo78")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2867, 2901)
+shape = SubResource("RectangleShape2D_2jo78")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(37, 1466)
+shape = SubResource("RectangleShape2D_yb30j")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(5724, 1659)
+shape = SubResource("RectangleShape2D_yb30j")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="L1Decs" type="Sprite2D" parent="StaticBody2D2"]
+texture = ExtResource("4_bkfc4")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(2191.75, 1500)
+shape = SubResource("RectangleShape2D_5ylyd")
+debug_color = Color(0.862745, 0.278431, 0.576471, 0.419608)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(4608.75, 1648.25)
+shape = SubResource("RectangleShape2D_yxjjr")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(5066, 1831)
+shape = SubResource("RectangleShape2D_yxjjr")
+one_way_collision = true
+debug_color = Color(0.427451, 0.596078, 0.223529, 0.419608)
+
+[node name="L1Enter" type="Sprite2D" parent="StaticBody2D2"]
+texture = ExtResource("4_030co")
+centered = false
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="L1StairsF" type="Sprite2D" parent="StaticBody2D3"]
+texture = ExtResource("4_v7p62")
+centered = false
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D3"]
+polygon = PackedVector2Array(5681, 1913.5, 5684, 1915.5, 5684, 2839.4, 5681.4, 2842, 5678, 2842, 5296, 2843, 5296, 2848.4, 5292.4, 2852, 4747, 2852, 4747, 2877.6, 4741.3, 2881, 4266, 2881, 4266, 2905.4, 4262.4, 2909, 3700.6, 2909, 3697, 2905.4, 3697, 2897, 3038, 2897, 3038, 2896, 3035, 2896, 3035, 2894.6, 3033, 2893.6, 3033, 2691, 3034.5, 2691, 3036.5, 2688, 3697, 2688, 3697, 2471.6, 3700.6, 2468, 4158, 2468, 4158, 2253.6, 4161.6, 2250, 4669, 2250, 4669, 2067.6, 4672.6, 2064, 5132, 2064, 5132, 1915.5, 5135, 1913.5, 5135, 1912, 5681, 1912)
+
+[node name="LevelEND" type="StaticBody2D" parent="."]
+
+[node name="LevelEND" type="CollisionShape2D" parent="LevelEND" groups=["LevelEnd"]]
+position = Vector2(265, 2545)
+shape = SubResource("RectangleShape2D_xdaor")
+debug_color = Color(0.270588, 0.631373, 0, 0.419608)
+
+[node name="MC" parent="." instance=ExtResource("6_kqc7r")]
+position = Vector2(304, 194)
+
+[node name="Camera2D" type="Camera2D" parent="MC"]
+position = Vector2(450, 764)
+limit_left = 0
+limit_top = 0
+limit_right = 5760
+limit_bottom = 3000
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="L1Bars" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+texture = ExtResource("3_uvvl6")
+centered = false
+
+[node name="Button" type="Button" parent="."]
+offset_left = 3806.0
+offset_top = 609.0
+offset_right = 4561.0
+offset_bottom = 911.0
+text = "Press the number keys to change the background colour!"

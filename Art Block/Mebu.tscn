@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0rpx0qrdnm1f"]
+
+[ext_resource type="Script" path="res://Mebu.gd" id="1_n3cgn"]
+[ext_resource type="Texture2D" uid="uid://ncev7y6n3aof" path="res://Assets for Art Block/Other/bg.png" id="1_w138x"]
+[ext_resource type="VideoStream" path="res://Assets for Art Block/Cutscenes/Sequence-_1_4__1.ogv" id="3_0o1uj"]
+[ext_resource type="Texture2D" uid="uid://b3b6umb4saiac" path="res://Assets for Art Block/Level Assets/Asssets2/Logo.png" id="4_i03wt"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_n3cgn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(971, 544)
+scale = Vector2(0.509259, 0.509259)
+texture = ExtResource("1_w138x")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(1504.64, 288.375)
+scale = Vector2(0.160357, 0.160357)
+texture = ExtResource("4_i03wt")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 163.0
+offset_top = 160.0
+offset_right = 659.0
+offset_bottom = 456.0
+text = "Press Enter to Start"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 164.0
+offset_top = 466.0
+offset_right = 660.0
+offset_bottom = 762.0
+text = "Settings"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1939.0
+offset_bottom = 1090.0
+
+[node name="Opening" type="VideoStreamPlayer" parent="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -19.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+stream = ExtResource("3_0o1uj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 34.0

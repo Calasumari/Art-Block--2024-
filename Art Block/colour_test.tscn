@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://bjgytpmtks2tp"]
+
+[ext_resource type="Script" path="res://ColourTest.gd" id="1_85kg5"]
+[ext_resource type="Texture2D" uid="uid://dhr8377kw0d1y" path="res://Assets for Art Block/Other/Assets/Illustration66 (5).png" id="2_ltun6"]
+[ext_resource type="Texture2D" uid="uid://bxiwqf6tymvra" path="res://Assets for Art Block/Other/Assets/Illustration66 (6).png" id="3_hyjkx"]
+[ext_resource type="Texture2D" uid="uid://wctes6riqlou" path="res://Assets for Art Block/Other/Assets/Illustration66 (9).png" id="3_wa87c"]
+[ext_resource type="Texture2D" uid="uid://blidc4qbpko4v" path="res://Assets for Art Block/Other/Assets/Illustration66 (8).png" id="4_4urv4"]
+[ext_resource type="Script" path="res://Animations.gd" id="4_fhqkg"]
+[ext_resource type="Texture2D" uid="uid://bkvxwomy6sdvt" path="res://Assets for Art Block/Other/Assets/Illustration66 (4).png" id="5_613l6"]
+[ext_resource type="Texture2D" uid="uid://cky44f2wtjbse" path="res://Assets for Art Block/Other/Assets/Illustration66 (7).png" id="7_hd617"]
+[ext_resource type="Texture2D" uid="uid://6vh3v3tyye56" path="res://Assets for Art Block/Other/Assets/Illustration66 (1).png" id="9_yb26l"]
+[ext_resource type="Script" path="res://Check.gd" id="10_rpv13"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5dt8f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ltun6")
+}],
+"loop": true,
+"name": &"Blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hyjkx")
+}],
+"loop": true,
+"name": &"Green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4urv4")
+}],
+"loop": true,
+"name": &"Orange",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_613l6")
+}],
+"loop": true,
+"name": &"Purple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wa87c")
+}],
+"loop": true,
+"name": &"Red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_hd617")
+}],
+"loop": true,
+"name": &"Yellow",
+"speed": 5.0
+}]
+
+[node name="Colour Test" type="Node"]
+
+[node name="player" type="Sprite2D" parent="."]
+script = ExtResource("1_85kg5")
+
+[node name="ColourBG" type="AnimatedSprite2D" parent="player"]
+sprite_frames = SubResource("SpriteFrames_5dt8f")
+animation = &"Yellow"
+script = ExtResource("4_fhqkg")
+
+[node name="Check" type="Sprite2D" parent="player"]
+texture = ExtResource("9_yb26l")
+script = ExtResource("10_rpv13")
